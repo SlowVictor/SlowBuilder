@@ -1,0 +1,31 @@
+{
+  "tabs": {
+    "dashboard": "Home",
+    "diary": "Diary",
+    "assistant": "Assistant",
+    "recipes": "Recipes",
+    "profile": "Profile"
+  },
+  "screens": {
+    "dashboard": "Daily overview",
+    "diary": "Food diary",
+    "assistant": "Nutrition assistant",
+    "recipes": "My recipes",
+    "profile": "My profile"
+  },
+  "settings": {
+    "title": "Settings",
+    "language": "Language",
+    "selectLanguage": "Select your application language",
+    "languageError": "Could not save your language preference."
+  },
+  "common": {
+    "loading": "Loading...",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "confirm": "Confirm",
+    "error": "Error"
+  }
+}

@@ -8,6 +8,7 @@ import DiaryScreen from '../screens/DiaryScreen';
 import AssistantScreen from '../screens/AssistantScreen';
 import RecipesScreen from '../screens/RecipesScreen';
 import ProfileScreen from '../screens/ProfileScreen';
+import { useTranslation } from 'react-i18next';
 
 import type { RootTabParamList } from '../types/navigation';
 
@@ -42,6 +43,7 @@ const tabIcons: Record<
 };
 
 export default function AppNavigator() {
+                const { t } = useTranslation();
   return (
     <NavigationContainer>
       <Tab.Navigator
@@ -49,6 +51,7 @@ export default function AppNavigator() {
         screenOptions={({ route }) => ({
           tabBarIcon: ({ focused, color, size }) => {
             const icon = tabIcons[route.name];
+
 
             return (
               <Ionicons
@@ -67,29 +70,34 @@ export default function AppNavigator() {
         })}
       >
         <Tab.Screen
-          name="Dashboard"
-          component={DashboardScreen}
-        />
+  name="Dashboard"
+  component={DashboardScreen}
+  options={{ title: t('tabs.dashboard') }}
+/>
 
-        <Tab.Screen
-          name="Diary"
-          component={DiaryScreen}
-        />
+<Tab.Screen
+  name="Diary"
+  component={DiaryScreen}
+  options={{ title: t('tabs.diary') }}
+/>
 
-        <Tab.Screen
-          name="Assistant"
-          component={AssistantScreen}
-        />
+<Tab.Screen
+  name="Assistant"
+  component={AssistantScreen}
+  options={{ title: t('tabs.assistant') }}
+/>
 
-        <Tab.Screen
-          name="Recipes"
-          component={RecipesScreen}
-        />
+<Tab.Screen
+  name="Recipes"
+  component={RecipesScreen}
+  options={{ title: t('tabs.recipes') }}
+/>
 
-        <Tab.Screen
-          name="Profile"
-          component={ProfileScreen}
-        />
+<Tab.Screen
+  name="Profile"
+  component={ProfileScreen}
+  options={{ title: t('tabs.profile') }}
+/>
       </Tab.Navigator>
     </NavigationContainer>
   );
