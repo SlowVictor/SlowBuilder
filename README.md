@@ -2,51 +2,155 @@
 
 **Day by day.**
 
-SlowBuilder is an AI-powered, cross-platform nutrition tracker designed to simplify daily food logging and support sustainable progress towards personal fitness goals.
+![Version](https://img.shields.io/badge/version-0.1.0-blue)
+![Status](https://img.shields.io/badge/status-in%20development-orange)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6)
+![React Native](https://img.shields.io/badge/React%20Native-61DAFB)
+![Expo](https://img.shields.io/badge/Expo-000020)
 
-## Project status
+## About
 
-Planning complete (v0.0.1). Implementation has not started. The project name is provisional pending formal trademark clearance; visual identity is intentionally undecided.
+SlowBuilder is an AI-powered nutrition and fitness tracking application designed to help users achieve their physical goals through consistent daily progress.
 
-## Planned MVP
+The project aims to simplify calorie and macronutrient tracking through natural language interaction, personalized nutritional goals and reusable recipes.
 
-- Daily calorie and macronutrient dashboard, with protein prominently displayed.
-- Manual food logging, editable diary and historical summaries.
-- Conversational AI for meal interpretation, daily follow-up and general nutrition guidance.
-- Reusable recipes with individual ingredients, quantities and nutrient values.
-- Personal accounts, manual or calculated nutrition goals, and customizable meal categories.
-- Spanish and English interfaces for iOS and Android.
+## Project Status
 
-## Planned technology stack
+Current version: **v0.1.0 — Foundation**
 
-| Layer | Technology |
-| --- | --- |
-| Mobile | React Native, Expo, TypeScript, React Navigation |
-| API | Node.js, Express, TypeScript |
-| Persistence | PostgreSQL, Prisma |
-| AI | OpenAI API, server-side structured responses |
-| Nutrition data | Local food records; external food database integration planned |
-| Quality | Jest, integration tests, GitHub Actions |
+The technical foundation of the mobile application is implemented. Nutrition tracking features are currently planned for the next development milestone.
+
+## Features
+
+### Implemented
+
+- [x] Cross-platform mobile development environment
+- [x] Modular application architecture
+- [x] TypeScript configuration
+- [x] Bottom tab navigation
+- [x] Typed navigation routes
+- [x] English and Spanish translations
+- [x] Automatic device language detection
+- [x] Manual language selection
+- [x] Persistent language preferences
+
+### Planned
+
+- [ ] Daily calorie dashboard
+- [ ] Macronutrient tracking
+- [ ] Personalized nutritional goals
+- [ ] Manual food registration
+- [ ] Nutritional history
+- [ ] User authentication
+- [ ] Backend API and database
+- [ ] Reusable recipes
+- [ ] AI-powered meal registration
+- [ ] Conversational nutrition assistant
+- [ ] Shopping list
+- [ ] Workout tracking
+
+## Technology Stack
+
+### Currently implemented
+
+- React Native
+- Expo
+- TypeScript
+- React Navigation
+- i18next
+- react-i18next
+- AsyncStorage
+- Ionicons
+
+### Planned backend and integrations
+
+- Node.js
+- Express
+- PostgreSQL
+- Prisma
+- OpenAI API
+
+## Project Structure
+
+```text
+slowbuilder/
+├── mobile/
+│   ├── assets/
+│   ├── src/
+│   ├── App.tsx
+│   └── package.json
+├── docs/
+├── CHANGELOG.md
+└── README.md
+```
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js
+- npm
+- Git
+- Expo Go with a compatible Expo SDK
+
+### Installation
+
+```bash
+git clone https://github.com/SlowVictor/slowbuilder.git
+cd slowbuilder/mobile
+npm ci
+npx expo start
+```
+
+Scan the QR code using a compatible device to launch the application.
+
+### Project Validation
+
+```bash
+npx tsc --noEmit
+npx expo-doctor
+```
 
 ## Documentation
 
-- [Project overview](docs/project-overview.md)
+- [Project Overview](docs/project-overview.md)
 - [Requirements](docs/requirements.md)
-- [User stories and acceptance criteria](docs/user-stories.md)
-- [Roadmap](docs/roadmap.md)
+- [User Stories](docs/user-stories.md)
+- [Development Roadmap](docs/roadmap.md)
+- [Mobile Architecture](docs/mobile-architecture.md)
+- [Changelog](CHANGELOG.md)
 
-## Development workflow
+## Development Workflow
 
-Work is organized into GitHub Issues, short-lived feature branches, pull requests and incremental Conventional Commits. The stable branch is `main`; `develop` is the proposed integration branch. Documentation and code identifiers are written in English.
+The project follows a structured development workflow using:
 
-## Getting started
+- Git and GitHub
+- Simplified Git Flow
+- Conventional Commits
+- GitHub Issues
+- GitHub Projects
+- Pull Requests
+- Milestones
+- Semantic Versioning
 
-Installation instructions will be added when the mobile and backend projects are initialized. No API credentials, personal nutrition logs or production secrets belong in this repository.
+## Roadmap
 
-## Disclaimer
+| Version | Milestone |
+|---|---|
+| v0.1.0 | Foundation |
+| v0.2.0 | Nutrition Core |
+| v0.3.0 | Backend |
+| v0.4.0 | Recipes & History |
+| v0.5.0 | AI Assistant |
+| v0.6.0 | Goals & Polish |
+| v1.0.0 | MVP Release |
 
-SlowBuilder is intended for general adult wellness and is not a medical or clinical nutrition service. AI estimates may be inaccurate and must be reviewable.
+## Author
 
-## License
+Developed by [SlowVictor](https://github.com/SlowVictor).
 
-Not yet selected.
+SlowBuilder is an independent portfolio project focused on learning and applying professional software development practices.
+
+---
+
+**SlowBuilder — Day by day.**
