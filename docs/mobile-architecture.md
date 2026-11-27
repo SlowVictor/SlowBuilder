@@ -70,11 +70,64 @@ Its responsibility is to initialize global configuration, providers and navigati
 
 ## Current Implementation
 
-The provisional welcome screen has been extracted from App.tsx into src/screens/WelcomeScreen.tsx.
+## Navigation Architecture
 
-The root component delegates the screen rendering to WelcomeScreen while maintaining global status bar configuration.
+SlowBuilder uses React Navigation to manage screen transitions and application navigation.
 
-Empty directories are preserved using .gitkeep files until their respective functionality is implemented.
+The current implementation uses a Bottom Tab Navigator with five primary screens.
+
+| Route | Screen | Responsibility |
+|---|---|---|
+| Dashboard | DashboardScreen | Daily nutritional overview. |
+| Diary | DiaryScreen | Meal registration and nutritional history. |
+| Assistant | AssistantScreen | AI-powered nutritional assistant. |
+| Recipes | RecipesScreen | Saved recipes and meal management. |
+| Profile | ProfileScreen | User settings and nutritional goals. |
+
+### Navigation Flow
+
+```mermaid
+flowchart TD
+    A[App.tsx] --> B[AppNavigator.tsx]
+    B --> C[DashboardScreen]
+    B --> D[DiaryScreen]
+    B --> E[AssistantScreen]
+    B --> F[RecipesScreen]
+    B --> G[ProfileScreen]
+```
+
+### Type Safety
+
+Navigation routes are defined using RootTabParamList in src/types/navigation.ts.
+
+This provides compile-time validation of route names and navigation parameters.
+
+### Navigation Dependencies
+
+- @react-navigation/native
+- @react-navigation/bottom-tabs
+- react-native-screens
+- react-native-safe-area-context
+- @expo/vector-icons
+- expo-font
+
+### Navigation Icons
+
+Ionicons provides active and inactive icons for each tab.
+
+Icon definitions are centralized in a strongly typed configuration object to ensure that every navigation route has a corresponding icon.
+
+### Design Decisions
+
+- Bottom tab navigation provides direct access to the five primary sections.
+- Navigation configuration is separated from individual screen components.
+- Route identifiers remain independent of displayed translations.
+- Native Stack Navigation will be introduced when secondary screens are required.
+- The current visual styling is provisional.
+
+### Related Issue
+
+#10 — Set up React Navigation.
 
 ## Future Evolution
 
